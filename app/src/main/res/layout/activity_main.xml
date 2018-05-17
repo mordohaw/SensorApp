@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="williammordohay.sensorapp.MainActivity">
+
+    <TextView
+        android:id="@+id/xTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:text="X" />
+
+    <TextView
+        android:id="@+id/yTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/xTextView"
+        android:layout_below="@+id/xTextView"
+        android:layout_marginTop="54dp"
+        android:text="Y" />
+
+    <TextView
+        android:id="@+id/zTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/yTextView"
+        android:layout_below="@+id/yTextView"
+        android:layout_marginTop="72dp"
+        android:text="Z" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Accelerometer" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/zTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="72dp"
+        android:text="Gyroscope" />
+
+    <TextView
+        android:id="@+id/xGiro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/zTextView"
+        android:layout_below="@+id/textView5"
+        android:layout_marginTop="34dp"
+        android:text="X" />
+
+    <TextView
+        android:id="@+id/yGiro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/xGiro"
+        android:layout_below="@+id/xGiro"
+        android:layout_marginTop="29dp"
+        android:text="Y" />
+
+    <TextView
+        android:id="@+id/zGiro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/yGiro"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/yGiro"
+        android:text="Z" />
+
+    <TextView
+        android:id="@+id/resoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/zTextView"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="59dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/minDelayTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/resoTextView"
+        android:layout_below="@+id/resoTextView"
+        android:layout_marginTop="18dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/versionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView5"
+        android:layout_alignStart="@+id/minDelayTextView"
+        android:text="TextView" />
+
+</RelativeLayout>
