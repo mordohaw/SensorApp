@@ -28,6 +28,15 @@ public class MenuActivity extends AppCompatActivity {
 
     }
 
+    public void goToShakeActivity(View v){
+        nextActivityIntent = new Intent(MenuActivity.this, ShakeActivity.class);
+
+        startActivity(nextActivityIntent);
+
+    }
+
+
+
     public void goToAccelerometerActivity(View v){
         nextActivityIntent = new Intent(MenuActivity.this, AccelerometerActivity.class);
 
