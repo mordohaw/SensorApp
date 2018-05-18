@@ -23,7 +23,7 @@ public class DetectSensorUsable extends AppCompatActivity {
             temperature = sm.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE);
 
             //Register sensor listener
-            isSensoravailable = sm.registerListener((SensorEventListener) this,temperature, SensorManager.SENSOR_DELAY_NORMAL);
+            sm.registerListener((SensorEventListener) this,temperature, SensorManager.SENSOR_DELAY_NORMAL);
         }catch(Exception ex){
             Toast.makeText(this,"sensor temperature isn't available",Toast.LENGTH_LONG).show();
 

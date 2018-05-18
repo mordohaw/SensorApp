@@ -34,4 +34,13 @@ public class MenuActivity extends AppCompatActivity {
         startActivity(nextActivityIntent);
 
     }
+
+    public void goToDirectionActivity(View v){
+        nextActivityIntent = new Intent(MenuActivity.this, DirectionActivity.class);
+
+        startActivity(nextActivityIntent);
+
+    }
+
+
 }

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="williammordohay.sensorapp">
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
 
     <!-- <uses-feature android:name="android.hardware.sensor.ambient_temperature" android:required="true" /> -->
     <application
@@ -10,10 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-
-        </activity>
-        <activity android:name=".SensorListActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".SensorListActivity" />
         <activity android:name=".DetectSensorUsable" />
         <activity android:name=".MenuActivity">
             <intent-filter>
@@ -23,7 +24,12 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".AccelerometerActivity">
+        <activity android:name=".AccelerometerActivity" />
+        <activity android:name=".DirectionActivity">
+
+        </activity>
+        <activity android:name=".ShakeActivity">
+
         </activity>
     </application>
 
