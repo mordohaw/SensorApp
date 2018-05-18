@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="williammordohay.sensorapp">
+
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
@@ -13,24 +14,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".SensorListActivity" />
         <activity android:name=".DetectSensorUsable" />
         <activity android:name=".MenuActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
+
         </activity>
         <activity android:name=".AccelerometerActivity" />
-        <activity android:name=".DirectionActivity">
-
-        </activity>
-        <activity android:name=".ShakeActivity">
-
+        <activity android:name=".DirectionActivity"></activity>
+        <activity android:name=".ShakeActivity"></activity>
+        <activity android:name=".ProximityActivity">
 
         </activity>
     </application>

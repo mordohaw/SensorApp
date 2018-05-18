@@ -51,5 +51,14 @@ public class MenuActivity extends AppCompatActivity {
 
     }
 
+    public void goToProximityActivity(View v){
+        nextActivityIntent = new Intent(MenuActivity.this, ProximityActivity.class);
+
+        startActivity(nextActivityIntent);
+
+    }
+
+
+
 
 }
