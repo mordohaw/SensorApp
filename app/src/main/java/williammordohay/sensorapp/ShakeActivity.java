@@ -31,7 +31,7 @@ public class ShakeActivity extends AppCompatActivity implements SensorEventListe
         //create sensor manager
         sm = (SensorManager) getSystemService(SENSOR_SERVICE);
         //accelerometer part
-        accelerometer = sm.getDefaultSensor(Sensor.TYPE_SIGNIFICANT_MOTION);
+        accelerometer = sm.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
         //Register sensor listener
         sm.registerListener(this,accelerometer,SensorManager.SENSOR_DELAY_NORMAL);
@@ -52,12 +52,20 @@ public class ShakeActivity extends AppCompatActivity implements SensorEventListe
 
     @Override
     public void onSensorChanged(SensorEvent event) {
-        if(hasCameraFlash){
-            flashLight(flashLightActivate);
+        float x,y,z;
+        x = event.values[0];
+        y=event.values[1];
+        z=event.values[2];
+        float accelerationSquareRoot = (x*x+y*y+z*z)/ (sm.GRAVITY_EARTH * sm.GRAVITY_EARTH);
+        if(accelerationSquareRoot>1.8){
+            if(hasCameraFlash){
+                flashLight(flashLightActivate);
 
-        }else{
-            Toast.makeText(ShakeActivity.this, "No flash available on your device", Toast.LENGTH_LONG).show();
+            }else{
+                Toast.makeText(ShakeActivity.this, "No flash available on your device", Toast.LENGTH_LONG).show();
+            }
         }
+
     }
 
     @Override
