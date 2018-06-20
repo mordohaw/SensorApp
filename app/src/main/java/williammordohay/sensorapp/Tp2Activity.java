@@ -60,10 +60,14 @@ public class Tp2Activity extends AppCompatActivity {
             newLocation.setLongitude(longitudePoint);
 
             float distanceInMeters = oldLocation.distanceTo(newLocation);
-            distanceEditText.setText(" " + String.valueOf(distanceInMeters) + " m");
+            String distanceToDisplay = " " + String.valueOf(distanceInMeters) + " m";
+            distanceEditText.setText(distanceToDisplay);
+
+            Toast.makeText(this, "distance : " + distanceToDisplay, Toast.LENGTH_SHORT).show();
 
 
         }else{
+            Toast.makeText(this, "init first point", Toast.LENGTH_SHORT).show();
             latitudePoint = latitudeGPS;
             longitudePoint = longitudeGPS;
         }
@@ -121,7 +125,7 @@ public class Tp2Activity extends AppCompatActivity {
         positionLong = String.valueOf(longitudeGPS);
         latTextView.setText(positionLat);//extras.getString("myLatitude");
         longTextView.setText(positionLong); //extras.getString("myLongitude");
-        Toast.makeText(this, positionLat +" + lon : " + positionLong, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, positionLat +" + lon : " + positionLong, Toast.LENGTH_SHORT).show();
         if(positionLat=="0.0" || positionLong =="0.0"){
             Toast.makeText(this, "Please wait few second, the position will be displayed. if not, go outside please. Thanks a lot", Toast.LENGTH_LONG).show();
         }

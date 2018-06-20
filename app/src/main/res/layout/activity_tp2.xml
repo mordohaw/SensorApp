@@ -55,6 +55,8 @@
 
     <TextView
         android:id="@+id/distanceEditText"
+        android:layout_alignParentRight="true"
+        android:textSize="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/distanceTextView"
@@ -66,10 +68,10 @@
         android:id="@+id/gpsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/distanceEditText"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="34dp"
-        android:text="ON/OFF GPS"
-        android:onClick="getGpsPoint"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:onClick="getGpsPoint"
+        android:text="ON/OFF GPS" />
 
 </RelativeLayout>
