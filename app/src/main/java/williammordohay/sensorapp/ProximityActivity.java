@@ -21,7 +21,7 @@ public class ProximityActivity extends AppCompatActivity implements SensorEventL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_proximity);
-        myIv = findViewById(R.id.presenceImage);
+        myIv = (ImageView) findViewById(R.id.presenceImage);
         initSensor();
 
     }

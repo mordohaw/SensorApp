@@ -18,7 +18,7 @@ public class DirectionActivity extends AppCompatActivity implements SensorEventL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_direction);
-        directionTextview = findViewById(R.id.directionText);
+        directionTextview = (TextView) findViewById(R.id.directionText);
 
         //create sensor manager
         sm = (SensorManager) getSystemService(SENSOR_SERVICE);
@@ -37,9 +37,6 @@ public class DirectionActivity extends AppCompatActivity implements SensorEventL
     public void onSensorChanged(SensorEvent event) {
 
         if(event.sensor.getType() == Sensor.TYPE_ACCELEROMETER){
-            /*xTextView.setText("X: " + event.values[0]);
-            yTextView.setText("Y: " + event.values[1]);
-            zTextView.setText("Z: " + event.values[2]);*/
             float x,y,z;
             x = event.values[0];
             y=event.values[1];

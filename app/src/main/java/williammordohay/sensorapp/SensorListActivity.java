@@ -26,7 +26,7 @@ public class SensorListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sensor_list);
-        sensorTextview = findViewById(R.id.sensorListView);
+        sensorTextview = (TextView) findViewById(R.id.sensorListView);
 
         //create sensor manager
         sm = (SensorManager) getSystemService(SENSOR_SERVICE);

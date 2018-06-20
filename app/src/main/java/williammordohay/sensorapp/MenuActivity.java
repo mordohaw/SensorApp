@@ -58,6 +58,13 @@ public class MenuActivity extends AppCompatActivity {
 
     }
 
+    public void goToTp2Activity(View v){
+        nextActivityIntent = new Intent(MenuActivity.this, Tp2Activity.class);
+
+        startActivity(nextActivityIntent);
+
+    }
+
 
 
 
